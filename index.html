@@ -7,6 +7,17 @@
 
     <!-- Default Meta Description (will be updated by JS) -->
     <meta name="description" content="Personal portfolio and blog of Connor Bahr, an aspiring Cyber Threat Analyst and CompTIA Security+ certified student.">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Connor Bahr | Cybersecurity Professional">
+    <meta property="og:description" content="Personal portfolio and blog of Connor Bahr, an aspiring Cyber Threat Analyst and CompTIA Security+ certified student.">
+    <meta property="og:image" content="https://i.ibb.co/5W43ztqw/Connor-Bahr.jpg">
+    <meta property="og:url" content="https://connorbahr.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Connor Bahr | Cybersecurity Professional">
+    <meta name="twitter:description" content="Personal portfolio and blog of Connor Bahr, an aspiring Cyber Threat Analyst and CompTIA Security+ certified student.">
+    <meta name="twitter:image" content="https://i.ibb.co/5W43ztqw/Connor-Bahr.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -663,18 +674,31 @@
         // --- NEW: Function to update meta tags ---
         const updateMetaTags = (route) => {
             document.title = route.title;
-            
-            let descriptionTag = document.querySelector('meta[name="description"]');
-            if (!descriptionTag) {
-                // Create one if it doesn't exist
-                descriptionTag = document.createElement('meta');
-                descriptionTag.name = 'description';
-                document.head.appendChild(descriptionTag);
-            }
-            descriptionTag.content = route.description;
-            
-            // You can also add OpenGraph (social media share) tags here
-            // e.g., document.querySelector('meta[property="og:title"]').content = route.title;
+
+            // Helper function to set a meta tag's content
+            const setMetaTag = (selector, content) => {
+                let tag = document.querySelector(selector);
+                if (!tag) {
+                    console.warn(`Meta tag ${selector} not found. Creating it.`);
+                    tag = document.createElement('meta');
+                    // This is a simplified way; assumes 'name' or 'property'
+                    if (selector.startsWith('meta[name=')) {
+                        tag.name = selector.substring(11, selector.length - 2);
+                    } else if (selector.startsWith('meta[property=')) {
+                        tag.setAttribute('property', selector.substring(15, selector.length - 2));
+                    }
+                    document.head.appendChild(tag);
+                }
+                tag.content = content;
+            };
+
+            // Set all meta tags
+            setMetaTag('meta[name="description"]', route.description);
+            setMetaTag('meta[property="og:title"]', route.title);
+            setMetaTag('meta[property="og:description"]', route.description);
+            setMetaTag('meta[name="twitter:title"]', route.title);
+            setMetaTag('meta[name="twitter:description"]', route.description);
+            // Note: The 'og:image' and 'og:url' are static and don't need to be updated per-page
         };
 
         // --- Function to show the correct "page" ---
@@ -700,9 +724,11 @@
                     targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             } else {
-                // Fallback
+                // Fallback to home if no target / 404
                 mainContentContainer.classList.remove('hidden');
-                document.getElementById('home').classList.remove('hidden');
+                document.querySelectorAll('.main-page-section').forEach(sec => sec.classList.remove('hidden'));
+                blogArticlePages.forEach(page => page.classList.add('hidden'));
+                window.scrollTo(0, 0); // Scroll to top for the 404/home view
             }
             
             // --- UPDATE THE METADATA ---
@@ -772,4 +798,5 @@
 
 </body>
 </html>
+
 
