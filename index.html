@@ -1,0 +1,677 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connor Bahr | Cybersecurity Professional</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- SEO: JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Connor Bahr",
+      "url": "https://connorbahr.com",
+      "description": "Aspiring Cyber Threat Analyst and Information Security Intern. CompTIA Security+ certified cybersecurity student at Maryville University.",
+      "image": "https://i.ibb.co/5W43ztqw/Connor-Bahr.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/connor-bahr",
+        "https://github.com/Cbahr3"
+      ],
+      "homeLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "St Louis",
+          "addressRegion": "MO",
+          "addressCountry": "US"
+        }
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "gender": {
+        "@type": "GenderType",
+        "name": "Male"
+      },
+      "knowsAbout": [
+        "Cybersecurity",
+        "Information Security",
+        "CompTIA Security+",
+        "Ethical Hacking",
+        "Blue Teaming",
+        "Red Teaming",
+        "Penetration Testing",
+        "Vulnerability Analysis",
+        "Malware Analysis",
+        "Network Security",
+        "Red Hat Linux"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Maryville University of Saint Louis"
+      },
+      "jobTitle": "Information Security Intern",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "NISC"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "CompTIA Security+",
+        "credentialCategory": "Certification",
+        "awardedBy": {
+          "@type": "Organization",
+          "name": "CompTIA"
+        }
+      },
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "Maryville Cyber Association",
+          "jobTitle": "Treasurer"
+        },
+        {
+          "@type": "Organization",
+          "name": "Maryville Ethical Hackers",
+          "jobTitle": "Member of Ethical Hacking Team"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple transition for nav toggle */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        
+        /* Styles for blog article content */
+        .article-content h2 {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 600;
+            margin-top: 2rem; /* 32px */
+            margin-bottom: 1rem; /* 16px */
+            color: #111827; /* gray-900 */
+        }
+        .article-content p {
+            margin-bottom: 1rem; /* 16px */
+            line-height: 1.75; /* 28px */
+            color: #374151; /* gray-700 */
+        }
+        .article-content ul, .article-content ol {
+            list-style-position: outside;
+            margin-left: 1.5rem; /* 24px */
+            margin-bottom: 1rem; /* 16px */
+            color: #374151; /* gray-700 */
+        }
+        .article-content ul {
+            list-style-type: disc;
+        }
+        .article-content ol {
+            list-style-type: decimal;
+        }
+        .article-content li {
+            margin-bottom: 0.5rem; /* 8px */
+        }
+        .article-content a {
+            color: #4f46e5; /* indigo-600 */
+            text-decoration: underline;
+        }
+        .article-content a:hover {
+            color: #4338ca; /* indigo-700 */
+        }
+        .article-content strong {
+            font-weight: 600;
+            color: #1f2937; /* gray-800 */
+        }
+        .article-content em {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 antialiased">
+
+    <!-- 
+    ======================================
+    HEADER & NAVIGATION
+    ======================================
+    -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo / Name -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-indigo-600 hover:text-indigo-700">
+                        Connor Bahr
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-indigo-600 font-medium px-3 py-2 rounded-md">Home</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-indigo-600 font-medium px-3 py-2 rounded-md">Portfolio</a>
+                    <a href="#blog" class="text-gray-600 hover:text-indigo-600 font-medium px-3 py-2 rounded-md">Blog</a>
+                    <a href="#contact" class="bg-indigo-600 text-white hover:bg-indigo-700 font-medium px-4 py-2 rounded-md shadow-sm transition duration-150 ease-in-out">
+                        Contact
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger Icon -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Close Icon (hidden by default) -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-600 hover:bg-gray-50 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#portfolio" class="text-gray-600 hover:bg-gray-50 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#blog" class="text-gray-600 hover:bg-gray-50 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                <a href="#contact" class="bg-indigo-600 text-white hover:bg-indigo-700 block w-full text-left px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 
+    ======================================
+    MAIN CONTENT WRAPPER
+    ======================================
+    -->
+    <div id="main-content-container">
+        <!-- 
+        ======================================
+        SECTION 1: HOME / ABOUT ME
+        ======================================
+        -->
+        <section id="home" class="main-page-section page-section min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Column 1: Headshot -->
+                <div class="flex justify-center md:justify-end">
+                    <img src="https://i.ibb.co/5W43ztqw/Connor-Bahr.jpg" 
+                         alt="A professional headshot of Connor Bahr" 
+                         class="rounded-xl shadow-2xl w-full max-w-md object-cover aspect-[4/5]"
+                         onerror="this.src='https://placehold.co/400x500/6366f1/white?text=Connor+Bahr'; this.onerror=null;">
+                </div>
+                
+                <!-- Column 2: Bio -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900">
+                        Connor Bahr
+                    </h1>
+                    <p class="mt-4 text-xl md:text-2xl font-medium text-indigo-600">
+                        Cybersecurity Student | Information Security Intern | CompTIA Security+ Certified
+                    </p>
+                    <p class="mt-6 text-lg text-gray-700 leading-relaxed max-w-prose mx-auto md:mx-0">
+                        As a second-year cybersecurity student at Maryville University, 
+                        <strong>Connor Bahr</strong> is passionate about safeguarding information and protecting systems against cyber threats. 
+                        He is actively involved in Maryville's Cyber Association and competes with the Ethical Hacking Team, where he continuously hones his skills 
+                        in penetration testing, vulnerability analysis, and ethical hacking. 
+                        <strong>Connor Bahr</strong> is always eager to learn and apply his knowledge to real-world security challenges.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#portfolio" class="inline-block bg-indigo-600 text-white font-medium py-3 px-8 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="inline-block bg-gray-800 text-white font-medium py-3 px-8 rounded-lg shadow-md hover:bg-gray-900 transition duration-300">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ======================================
+        SECTION 2: PORTFOLIO / MY WORK
+        ======================================
+        -->
+        <section id="portfolio" class="main-page-section page-section py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900">
+                        Portfolio & Projects
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Tangible evidence of my skills and accomplishments.
+                    </p>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project 1: Blue Team Home Lab -->
+                    <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col ring-1 ring-gray-200">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-2xl font-semibold text-gray-900">Cybersecurity Blue Team Home Lab</h3>
+                            <p class="mt-3 text-gray-600">
+                                A personal project focused on building a home lab for practicing both red and blue teaming techniques. This environment is used for hands-on learning in malware analysis, threat detection, and network security.
+                            </p>
+                        </div>
+                        <div class="p-6 bg-gray-100 border-t border-gray-200">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Red Hat Linux</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Malware Analysis</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Threat Detection</span>
+                            </div>
+                            <a href="https://github.com/Cbahr3/Blueteaming-Home-Lab" target="_blank" rel="noopener noreferrer" class="font-medium text-indigo-600 hover:text-indigo-500">
+                                View on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Security+ Notes -->
+                    <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col ring-1 ring-gray-200">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-2xl font-semibold text-gray-900">CompTIA Security+ 701 Study Notes</h3>
+                            <p class="mt-3 text-gray-600">
+                                A comprehensive compilation of notes and resources gathered while preparing for the CompTIA Security+ (SY0-701) certification. This repository serves as a public study guide.
+                            </p>
+                        </div>
+                        <div class="p-6 bg-gray-100 border-t border-gray-200">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Cybersecurity</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">CompTIA</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Study Guide</span>
+                            </div>
+                            <a href="https://github.com/Cbahr3/Security-SY0-701-Notes" target="_blank" rel="noopener noreferrer" class="font-medium text-indigo-600 hover:text-indigo-500">
+                                View on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Ethical Hacking CTFs -->
+                    <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col ring-1 ring-gray-200">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-2xl font-semibold text-gray-900">Ethical Hacking CTFs</h3>
+                            <p class="mt-3 text-gray-600">
+                                Active participation in Capture The Flag (CTF) competitions with the Maryville Ethical Hackers team, including NCL, CCDC, and other events. Focused on solving challenges in cryptography, web vulnerabilities, and more.
+                            </p>
+                        </div>
+                        <div class="p-6 bg-gray-100 border-t border-gray-200">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">CTF</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Ethical Hacking</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Teamwork</span>
+                            </div>
+                            <a href="https://github.com/Cbahr3" target="_blank" rel="noopener noreferrer" class="font-medium text-indigo-600 hover:text-indigo-500">
+                                View GitHub Profile &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ======================================
+        SECTION 3: BLOG
+        ======================================
+        -->
+        <section id="blog" class="main-page-section page-section py-24 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900">
+                        Blog & Insights
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Sharing my knowledge and documenting my learning journey.
+                    </p>
+                </div>
+                
+                <div class="space-y-12 max-w-3xl mx-auto">
+                    <!-- Blog Post 1 -->
+                    <article class="bg-white p-6 rounded-xl shadow-lg">
+                        <p class="text-sm text-gray-500">November 13, 2025</p>
+                        <h3 class="mt-2 text-2xl font-semibold text-gray-900">
+                            3 Key Lessons from My First NCL Competition
+                        </h3>
+                        <p class="mt-3 text-gray-600">
+                            The National Cyber League (NCL) was my first time facing so many different problems at once. I was hooked, but I also learned a few hard lessons. Here are my top three takeaways from that first season...
+                        </p>
+                        <a href="#blog-article-3" class="mt-4 inline-block font-medium text-indigo-600 hover:text-indigo-700">
+                            Read More &rarr;
+                        </a>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="bg-white p-6 rounded-xl shadow-lg">
+                        <p class="text-sm text-gray-500">October 20, 2025</p>
+                        <h3 class="mt-2 text-2xl font-semibold text-gray-900">
+                            What's a CTF? A Beginner's Guide to 'Capture The Flag'
+                        </h3>
+                        <p class="mt-3 text-gray-600">
+                            In the hacking world, a CTF is a hands-on competition designed to challenge your cybersecurity skills. I've found that CTFs are, without a doubt, the single best way to learn practical, real-world skills. But what are they, really?
+                        </p>
+                        <a href="#blog-article-2" class="mt-4 inline-block font-medium text-indigo-600 hover:text-indigo-700">
+                            Read More &rarr;
+                        </a>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="bg-white p-6 rounded-xl shadow-lg">
+                        <p class="text-sm text-gray-500">September 15, 2024</p>
+                        <h3 class="mt-2 text-2xl font-semibold text-gray-900">
+                            How I Passed the CompTIA Security+ (SY0-701) on My First Try
+                        </h3>
+                        <p class="mt-3 text-gray-600">
+                            As a cybersecurity student, I knew this was a critical foundational certification. Many people ask me what I used to study, so I decided to write this post to share my process. If you're studying for the Sec+ right now, I hope my experience can help.
+                        </p>
+                        <a href="#blog-article-1" class="mt-4 inline-block font-medium text-indigo-600 hover:text-indigo-700">
+                            Read More &rarr;
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ======================================
+        SECTION 4: CONTACT
+        ======================================
+        -->
+        <section id="contact" class="main-page-section page-section py-24 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-gray-900">
+                    Get In Touch
+                </h2>
+                <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                    I'm always open to connecting with fellow students, professionals, and recruiters. 
+                    The best way to reach me is via LinkedIn or email. Feel free to follow my project work on GitHub as well.
+                </p>
+                
+                <div class="mt-12 flex flex-col sm:flex-row justify-center gap-6">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/connor-bahr/" 
+                       target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center justify-center gap-3 bg-blue-600 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                        <!-- LinkedIn SVG Icon -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        Connect on LinkedIn
+                    </a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/Cbahr3" 
+                       target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center justify-center gap-3 bg-gray-900 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:bg-gray-800 transition duration-300">
+                        <!-- GitHub SVG Icon -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.84c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.135 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/>
+                        </svg>
+                        Follow on GitHub
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:connorbahr3@gmail.com" 
+                       class="flex items-center justify-center gap-3 bg-gray-200 text-gray-800 font-medium py-3 px-6 rounded-lg shadow-md hover:bg-gray-300 transition duration-300">
+                        <!-- Email SVG Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Send an Email
+                    </a>
+                </div>
+                <p class="mt-8 text-sm text-gray-500 italic">
+                    (Email: connorbahr3@gmail.com)
+                </p>
+            </div>
+        </section>
+    </div> <!-- End Main Content Container -->
+
+    <!-- 
+    ======================================
+    BLOG ARTICLE PAGES (HIDDEN BY DEFAULT)
+    ======================================
+    -->
+
+    <!-- Article 1: Security+ -->
+    <section id="blog-article-1" class="blog-article-page page-section hidden bg-white min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <a href="#blog" class="inline-block mb-8 text-indigo-600 font-medium hover:text-indigo-800">&larr; Back to Blog</a>
+            <h1 class="text-4xl font-bold text-gray-900">How I Passed the CompTIA Security+ (SY0-701) on My First Try</h1>
+            <p class="mt-4 text-lg text-gray-500">September 15, 2024</p>
+            
+            <div class="article-content mt-8">
+                <p>Over a year ago, I successfully passed the CompTIA Security+ (SY0-701) exam, and I'm thrilled to be officially certified currently. As a cybersecurity student, I knew this was a critical foundational certification to earn. Many people from my university ask me what I used to study and what my strategy was, so I decided to write this post to share my process.</p>
+                <p>If you're studying for the Sec+ right now, I hope my experience can help you.</p>
+
+                <h2>My Core Study Resources</h2>
+                <p>You don't need to buy a dozen different books. I focused on a few high-quality resources most of which were entirely free:</p>
+                <ul>
+                    <li><strong>Mike Chapple's Sybex Study Guide:</strong> This was my first and primary resource that I utilized. This book is chock-full of information that is presented in a very easy-to-understand manner... In my opinion, this book struck the perfect balance between the value of content and length. This Study Kit includes the textbook as well as over 1000 practice questions all for the cost of around $40. One tip I will put out there is that you are able to use the access code that is included in the book, to take the practice questions online through their platform, which is a WAY better experience. Here is the Amazon link for this book: <a href="https://www.amazon.com/CompTIA-Security-Certification-Kit-SY0-701/dp/1394211449" target="_blank" rel="noopener noreferrer">Amazon Link</a></li>
+                    <li><strong>Mike Chapple's LinkedIn Learning Course:</strong> This was my primary video resource that acts as a perfect companion to the Sybex Study Guide... His explanations are clear, and he covers every objective on the exam in a logical order.</li>
+                    <li><strong>Professor Messer's SY0-701 Videos (YouTube):</strong> Professor Messer's channel is another great resource. If you want a second opinion/reference, there is not a better place to go!</li>
+                    <li><strong>Practice Exams & Questions:</strong> As mentioned previously, the primary source of test questions that I used was from the Sybex Exam Kit. However, there are a LOT of free resources out there. Quizlet has so many practice question sets... Much of the content is the exact same, so utilize it as well.</li>
+                    <li><strong>My Own Notes:</strong> This was the most important part of my study. As I went through the video courses, I compiled all my own notes into an organized Obsidian folder. My notes are attached to my website, and my LinkedIn so feel free to look over/download them... <a href="https://github.com/Cbahr3/Security-SY0-701-Notes" target="_blank" rel="noopener noreferrer">My GitHub Notes</a></li>
+                </ul>
+
+                <h2>My Study Strategy</h2>
+                <p>My process was simple: Learn, Review, Practice.</p>
+                <ol>
+                    <li><strong>Learn (The "First Pass"):</strong> I went through Mike Chapple's entire course, taking detailed notes as I went. The goal was just to get exposure to all the topics.</li>
+                    <li><strong>Review (The "Second Pass"):</strong> This is where my notes came in. I put away the videos and only studied my notes. I would read a section, look away, and try to explain the concept out loud.</li>
+                    <li><strong>Practice (The "Final Phase"):</strong> After I felt confident with my notes, I moved on to practice exams... The key here isn't just to get a good score, but to read the explanation for every single question you get wrong. This is how you find your weak spots.</li>
+                </ol>
+                
+                <h2>Exam Day Tips</h2>
+                <ul>
+                    <li><strong>Flag the PBQs:</strong> The Performance-Based Questions (PBQs) at the beginning are time-consuming. Flag them for review, blast through the multiple-choice questions, and then come back to the PBQs at the end.</li>
+                    <li><strong>Read Every Word:</strong> CompTIA loves to try and trick you. Read the question twice. Look for keywords like "BEST," "MOST," or "NOT."</li>
+                    <li><strong>Trust Your Gut:</strong> Your first instinct is usually the right one. Don't go back and change your answers unless you are 100% certain you misread the question.</li>
+                </ul>
+
+                <h2>Final Thoughts</h2>
+                <p>Passing the Security+ is a marathon, not a sprint. It takes consistent effort, but it is absolutely achievable. My biggest piece of advice is to create your own study materials... That active learning process is what makes the information stick.</p>
+                <p>Good luck with your studies!</p>
+            </div>
+            <a href="#blog" class="inline-block mt-12 text-indigo-600 font-medium hover:text-indigo-800">&larr; Back to Blog</a>
+        </div>
+    </section>
+
+    <!-- Article 2: What's a CTF? -->
+    <section id="blog-article-2" class="blog-article-page page-section hidden bg-white min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <a href="#blog" class="inline-block mb-8 text-indigo-600 font-medium hover:text-indigo-800">&larr; Back to Blog</a>
+            <h1 class="text-4xl font-bold text-gray-900">What's a CTF? A Beginner's Guide to 'Capture The Flag'</h1>
+            <p class="mt-4 text-lg text-gray-500">October 20, 2025</p>
+            
+            <div class="article-content mt-8">
+                <p>If you're exploring cybersecurity, you've probably heard the term "CTF." It stands for <strong>"Capture The Flag,"</strong> and no, we're not running around in a field. In the hacking world, a CTF is a hands-on competition designed to challenge your cybersecurity skills.</p>
+                <p>As a member of the Maryville Ethical Hacking Team and a competitor in events like the National Cyber League (NCL), I've found that CTFs are, without a doubt, the single best way to learn practical, real-world skills.</p>
+                <p>But what are they, really? Here's a simple breakdown.</p>
+                
+                <h2>The Basic Idea</h2>
+                <p>In a CTF, you're presented with a set of challenges. Each challenge has a hidden "flag" – a specific string of text, like <code>flag{this_is_a_secret_key}</code>. Your goal is to use your technical skills to find that flag. When you find it, you submit it to the competition scoreboard for points.</p>
+                <p>These aren't random guessing games. They are puzzles that require you to act like a hacker—or a defender—to find a vulnerability and exploit it.</p>
+                
+                <h2>What Kinds of Challenges Are There?</h2>
+                <p>CTFs are usually broken down into a few main categories. Here are some of the most common ones you'll see:</p>
+                <ul>
+                    <li><strong>Cryptography:</strong> You're given an encrypted message (a "ciphertext") and have to figure out how to decrypt it to find the flag.</li>
+                    <li><strong>Web Exploitation:</strong> You're given a website and have to find a vulnerability. This might mean using SQL Injection to dump a database or bypassing a login page.</li>
+                    <li><strong>Reverse Engineering:</strong> You're given a compiled program (like an .exe file) and you have to figure out what it does without seeing the source code.</li>
+                    <li><strong>Forensics:</strong> You're given a "digital artifact," like a hard drive image or a network traffic capture (.pcap file). You have to play detective and analyze the file.</li>
+                    <li><strong>Binary Exploitation (Pwn):</strong> A more advanced category where you find a vulnerability in a program (like a buffer overflow) and write your own code to "exploit" it.</li>
+                </ul>
+                <p>It's important to note, that you don’t have to be an expert in all of these categories. That is why most of the CTFs you’ll encounter are team-based. You and your teammates can make up for each other’s weaknesses or knowledge gaps.</p>
+                
+                <h2>Why Should You Bother with CTFs?</h2>
+                <p>Classroom learning is great for theory, but CTFs are where you <em>apply</em> it. I can without a doubt say that extracurricular activities is where I have learned the most! Here’s why I spend my time on them:</p>
+                <ul>
+                    <li><strong>It's the Fastest Way to Learn:</strong> You will learn more in one weekend-long CTF than you will in a month of just reading textbooks.</li>
+                    <li><strong>You Learn to Think Like an Attacker:</strong> To be a good defender ("Blue Teamer"), you have to understand how an attacker thinks ("Red Teamer"). CTFs force you to adopt that offensive mindset.</li>
+                    <li><strong>It's Great for Your Resume:</strong> When a recruiter sees "Participates in CTF competitions" on my resume, it's a concrete signal that I have hands-on experience and a genuine passion for the field.</li>
+                    <li><strong>They're Fun!</strong> It's a game. It's a puzzle. It's incredibly frustrating right up until that "eureka!" moment when you finally find the flag, and that feeling is a huge rush.</li>
+                </ul>
+
+                <h2>How Can You Get Started?</h2>
+                <p>If you're a student, the best way to start is to see if your school has a cybersecurity club or team. If not, there are amazing resources online:</p>
+                <ul>
+                    <li><strong>picoCTF:</strong> The best place for absolute beginners.</li>
+                    <li><strong>CTFtime:</strong> A calendar of all upcoming CTF competitions.</li>
+                    <li><strong>National Cyber League (NCL):</strong> A great, gym-style competition specifically for students to build and test their skills.</li>
+                </ul>
+                <p>If you've been curious about cybersecurity but don't know where to start, I highly recommend trying a CTF. It might just be the thing that gets you hooked.</p>
+            </div>
+            <a href="#blog" class="inline-block mt-12 text-indigo-600 font-medium hover:text-indigo-800">&larr; Back to Blog</a>
+        </div>
+    </section>
+
+    <!-- Article 3: NCL Lessons -->
+    <section id="blog-article-3" class="blog-article-page page-section hidden bg-white min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+            <a href="#blog" class="inline-block mb-8 text-indigo-600 font-medium hover:text-indigo-800">&larr; Back to Blog</a>
+            <h1 class="text-4xl font-bold text-gray-900">3 Key Lessons from My First NCL Competition</h1>
+            <p class="mt-4 text-lg text-gray-500">November 13, 2025</p>
+            
+            <div class="article-content mt-8">
+                <p>In my last post, I explained what a "Capture The Flag" (CTF) competition is. Now, I want to share my personal experience and the biggest lessons I learned from my first major event: the National Cyber League (NCL).</p>
+                <p>The NCL is a "gym-style" competition, meaning you have one weekend to solve dozens of challenges. It was my first time facing so many different problems at once, and it was a huge learning experience.</p>
+                <p>I was hooked, but I also learned a few hard lessons. Here are my top three takeaways from that first season.</p>
+
+                <h2>1. A Balanced Team is Essential</h2>
+                <p>I quickly learned that you can't be an expert in everything. The NCL has nine different categories, including Cryptography, Web Exploitation, Forensics, and Reverse Engineering. While I was comfortable in a few areas, I hit a wall in others.</p>
+                <p>This is where your team comes in. Having a balanced team where each member has a different specialty is essential. Having a teammate who loves "Reverse Engineering" while you tackle "Web Exploitation" means you can cover more ground and learn from each other.</p>
+
+                <h2>2. Time Management is Key</h2>
+                <p>The NCL isn't a "solve one problem" test, it's a race against the clock. You have one weekend to complete dozens of challenges. My first instinct was to just pick one hard problem and grind until I solved it. I spent three hours stuck on a single, medium-difficulty challenge.</p>
+                <p>By the time I gave up, I had zero points and had wasted a huge chunk of my time. I soon learned the real strategy: go for the low-hanging fruit first. It's far better to spend that time solving 5-10 easy challenges across all categories to get points on the board.</p>
+
+                <h2>3. Use Your Resources (But Use Them to Learn)</h2>
+                <p>One of the best things about NCL is that it's "open-book." You are allowed—and encouraged—to use your resources. Whether it's Google, AI tools, or your own notes, anything is fair game.</p>
+                <p>I hit a "Forensics" challenge I had no idea how to even start. I started Googling key terms and even asked an AI to explain the core concept. Twenty minutes later, I had a new tool, a new method, and the flag.</p>
+                <p>But here’s the key: this is only allowed as long as you actually <em>learn</em> and don't just copy-paste verbatim. The goal is to learn how to find information and apply it. The NCL taught me that cybersecurity isn't about memorizing everything; it's about being an expert researcher who can find and apply new information <em>fast</em>.</p>
+
+                <h2>My Final Takeaway</h2>
+                <p>My first NCL was intense, a little overwhelming, and one of the most fun things I've done in my cybersecurity journey. I didn't get a perfect score, but I learned <em>so much</em>.</p>
+                <p>If you're a student on the fence about trying a CTF like the NCL, my advice is to just do it. You don't have to be an expert. Get some friends or schoolmates together and have a fun time! My advice is to not take it too seriously and just consider a chance to learn and be prepared for the next time you compete. You'll be surprised at how much you can grow in a single weekend.</p>
+            </div>
+            <a href="#blog" class="inline-block mt-12 text-indigo-600 font-medium hover:text-indigo-800">&larr; Back to Blog</a>
+        </div>
+    </section>
+
+    <!-- 
+    ======================================
+    FOOTER
+    ======================================
+    -->
+    <footer class="main-page-section page-section bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Connor Bahr. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 
+    ======================================
+    JAVASCRIPT for Menu and Page Navigation
+    ======================================
+    -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = menuButton.querySelector('svg:first-child');
+            const closeIcon = menuButton.querySelector('svg:last-child');
+            
+            const mainPageSections = document.querySelectorAll('.main-page-section');
+            const blogArticlePages = document.querySelectorAll('.blog-article-page');
+            const allPageSections = document.querySelectorAll('.page-section');
+
+            // --- Toggle mobile menu ---
+            menuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+                menuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+
+            // --- Function to close the mobile menu ---
+            const closeMobileMenu = () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            };
+
+            // --- Handle all navigation clicks ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault(); // Stop default jump
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Check if it's a blog article link
+                        if (targetElement.classList.contains('blog-article-page')) {
+                            // Show blog article, hide main page
+                            mainPageSections.forEach(section => section.classList.add('hidden'));
+                            blogArticlePages.forEach(page => page.classList.add('hidden'));
+                            
+                            targetElement.classList.remove('hidden');
+                            window.scrollTo(0, 0); // Scroll to top of new "page"
+                        
+                        } else if (targetElement.classList.contains('main-page-section')) {
+                            // Show main page, hide blog articles
+                            mainPageSections.forEach(section => section.classList.remove('hidden'));
+                            blogArticlePages.forEach(page => page.classList.add('hidden'));
+                            
+                            // Smooth scroll to the section
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        } else if (targetId === '#') {
+                            // Fallback for empty hash
+                             window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }
+                    
+                    // Close mobile menu after click
+                    closeMobileMenu();
+                });
+            });
+
+            // --- Close mobile menu when clicking outside ---
+            document.addEventListener('click', (event) => {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnButton = menuButton.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnButton) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
